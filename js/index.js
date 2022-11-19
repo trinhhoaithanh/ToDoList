@@ -52,7 +52,7 @@ function UpdateTask(taskId,status){
             arrTaskComplete.push(newTask);
             setLocalStorage();
             renderTaskToDo(arrTaskToDo);
-            arrTaskComplete(arrTaskComplete);
+            renderTaskCompleted(arrTaskComplete);
         }
     }else if(status==='completed'){
         var index = arrTaskComplete.findIndex((task)=>task.id===taskId);
@@ -65,7 +65,7 @@ function UpdateTask(taskId,status){
             arrTaskToDo.push(newTask);
             setLocalStorage();
             renderTaskToDo(arrTaskToDo);
-            arrTaskComplete(arrTaskComplete);
+            renderTaskCompleted(arrTaskComplete);
         }
     }
 }

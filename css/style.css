@@ -281,35 +281,35 @@ ul.todo li .buttons button {
   padding: 5px 0 5px 5px;
   font-size: 1rem;
 }
-ul.todo li .buttons .remove {
+ul.todo li .buttons .delete {
   color: #aaa;
 }
-ul.todo li .buttons .remove:hover {
+ul.todo li .buttons .delete:hover {
   color: #fa396b;
 }
 
-ul.todo li .buttons .complete {
+ul.todo li .buttons .update {
   color: #aaa;
 }
 
-ul.todo li .buttons .complete:hover {
+ul.todo li .buttons .update:hover {
   color: #25b99a;
 }
 
-ul.todo#todo li .buttons .complete .fas {
+ul.todo#todo li .buttons .update .fas {
   display: none;
 }
 
-ul.todo#todo li .buttons .complete .far {
+ul.todo#todo li .buttons .update .far {
   display: block;
 }
 
-ul.todo#completed li .buttons .complete .fas {
+ul.todo#completed li .buttons .update .fas {
   display: block;
   color: #25b99a;
 }
 
-ul.todo#completed li .buttons .complete .far {
+ul.todo#completed li .buttons .update .far {
   display: none;
 }
 
