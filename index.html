@@ -36,10 +36,11 @@
               type="text"
               placeholder="Enter an activity..."
             />
-            <button id="addItem">
+            <button id="addItem"  >
               <i class="fa fa-plus"></i>
             </button>
           </div>
+          <div id="err-task-required" style="display:none;" class="text text-danger mt-2"></div>
           <div id="notiInput" class="alert-danger" style="display: none"></div>
           <div class="card__todo">
             <!-- Uncompleted tasks -->
@@ -68,5 +69,8 @@
         });
       });
     </script>
+    <script src="./js/index.js"></script>
+    <script src="./models/Task.js"></script>
+    <script src="./utils/Validation.js"></script>
   </body>
 </html>
