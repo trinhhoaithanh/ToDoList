@@ -7,10 +7,10 @@ document.getElementById('addItem').onclick=function(){
     task.taskName = document.getElementById('newTask').value;
     task.status = 'todo';
     
-   
+    const arrTaskList = [...arrTaskToDo, ...arrTaskComplete];
     var valid =true;
     valid=validation.kiemTraRong(task.taskName,"err-task-required","Tên task");
-
+    valid&=validation.trungTenTask(task.taskName,"notiInput","Task",arrTaskList);
     if(!valid){
         return;
     }
