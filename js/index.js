@@ -18,7 +18,7 @@ document.getElementById('addItem').onclick=function(){
     setLocalStorage();
     renderTaskToDo(arrTaskToDo);
     console.log(arrTaskToDo);
-    document.getElementById('newTask').value="";
+    // document.getElementById('newTask').value="";
 
 }
 //Delete Task
@@ -76,12 +76,12 @@ function renderTaskToDo(arrTaskToDo){
         var arrTask = arrTaskToDo[index];
         contentHTML+=`
             <span>${arrTask.taskName}</span>
-            <div>
+            <div class='buttons'>
                 <button class='delete'>
-                    	<i class="fa fa-trash-alt"></i>
+                    	<i class="fa fa-trash-alt" onclick="DeleteTask(${arrTask.id}, '${arrTask.status}')"></i>
                 </button>
-                <button class='update'>
-                    <i class="far fa-check-circle"></i>
+                <button class='update'  onclick="UpdateTask(${arrTask.id}, '${arrTask.status}')">
+                    <i class="far fa-check-circle" ></i>
                     <i class="fas fa-check-circle"></i>
                 </button>
             </div>
@@ -96,7 +96,7 @@ function renderTaskCompleted(arrTaskCompleted) {
       contentHTML += `
           <li>
               <span>${arrTask.taskName}</span>
-              <div>
+              <div class='buttons'>
                   <button class="delete" onclick="DeleteTask(${arrTask.id}, '${arrTask.status}')">
                       <i class="fa fa-trash-alt"></i>
                   </button>
