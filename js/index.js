@@ -75,6 +75,7 @@ function renderTaskToDo(arrTaskToDo){
     for (var index=0;index<arrTaskToDo.length;index++){
         var arrTask = arrTaskToDo[index];
         contentHTML+=`
+        <li>
             <span>${arrTask.taskName}</span>
             <div class='buttons'>
                 <button class='delete'>
@@ -85,6 +86,7 @@ function renderTaskToDo(arrTaskToDo){
                     <i class="fas fa-check-circle"></i>
                 </button>
             </div>
+            </li>
         `;
     }
     document.getElementById("todo").innerHTML=contentHTML;
