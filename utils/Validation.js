@@ -13,7 +13,7 @@ var validation = {
         value=removeVietnameseTones(value);
         var flag=false;
         for (var index = 0; index < arr.length; index++) {
-            var taskname = arr[index].name;
+            var taskname = arr[index].taskName;
             taskname = taskname.trim().toLowerCase();
             taskname = removeVietnameseTones(taskname);
             if(taskname === value){
